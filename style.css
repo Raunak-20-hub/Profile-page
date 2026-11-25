@@ -1,0 +1,530 @@
+
+/* =====================================
+   1. BASIC SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #160b14,
+        #481426,
+        #a9364c
+    );
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    isolation: isolate;
+
+    overflow-x: hidden;
+
+    transition: 0.4s ease;
+}
+
+
+/* =====================================
+   2. BACKGROUND TITLE
+===================================== */
+
+.background-title {
+    position: fixed;
+
+    right: 7%;
+    top: 28%;
+
+    text-align: center;
+
+    z-index: 0;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+.background-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 7vw, 100px);
+
+    letter-spacing: 8px;
+
+    line-height: 1.1;
+
+    color: #ff8290;
+}
+
+.background-title span {
+    display: block;
+
+    font-size: 65px;
+
+    margin-top: 20px;
+}
+
+
+/* =====================================
+   3. MAIN CONTAINER
+===================================== */
+
+.container {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px 15px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =====================================
+   4. THEME BUTTONS
+===================================== */
+
+.theme-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.theme-btn {
+    padding: 12px 25px;
+
+    background: #171923;
+
+    color: white;
+
+    border: 1px solid #ff526b;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 15px #ff526b;
+}
+
+
+/* =====================================
+   5. PROFILE CARD
+===================================== */
+
+.profile-card {
+    width: 100%;
+
+    max-width: 390px;
+
+    background: #11141d;
+
+    color: white;
+
+    border: 1px solid #a83c50;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 50, 80, 0.12);
+
+    transition: 0.4s;
+}
+
+
+/* =====================================
+   6. PROFILE IMAGES
+===================================== */
+
+.profile-image {
+    padding-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border: 4px solid #ff596f;
+
+    box-shadow: 0 0 22px
+                rgba(255, 60, 90, 0.3);
+}
+
+
+/* Dark Mode Image */
+
+.dark-image {
+    display: block;
+}
+
+
+/* Light Mode Image hidden initially */
+
+.light-image {
+    display: none;
+}
+
+
+/* =====================================
+   7. PROFILE INFORMATION
+===================================== */
+
+.profile-info {
+    padding: 25px 22px 30px;
+}
+
+.profile-info h1 {
+    font-size: 34px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.red-line {
+    width: 100px;
+
+    height: 3px;
+
+    background: #ff4b63;
+
+    margin: 0 auto 20px;
+
+    border-radius: 10px;
+}
+
+.profile-info p {
+    font-size: 15px;
+
+    color: #b8c0d0;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.profile-info h3 {
+    font-size: 14px;
+
+    font-weight: normal;
+
+    color: #ff6479;
+
+    margin-bottom: 25px;
+}
+
+.profile-info h3 span {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   8. CONTACT BUTTON
+===================================== */
+
+.contact-button {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 25px;
+
+    background: #252c3a;
+
+    color: white;
+
+    border: 1px solid #ff526b;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-button span {
+    font-size: 18px;
+}
+
+.contact-button:hover {
+    background: #ff435e;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 18px #ff435e;
+}
+
+
+/* =====================================
+   9. SOCIAL MEDIA BUTTONS
+===================================== */
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #0b0e15;
+}
+
+.social-icon {
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #292f3e;
+
+    color: white;
+
+    border: 1px solid #444b5b;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.social-icon span {
+    font-size: 23px;
+}
+
+.instagram-logo {
+    font-size: 30px !important;
+}
+
+.x-logo {
+    font-size: 22px !important;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    background: #ff435e;
+
+    border-color: #ff435e;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 15px #ff435e;
+}
+
+
+/* =====================================
+   10. CLICK MESSAGE
+===================================== */
+
+#button-message {
+    min-height: 28px;
+
+    padding: 0 10px 10px;
+
+    color: #ff8290;
+
+    font-size: 12px;
+}
+
+
+/* =====================================
+   11. LIGHT MODE
+===================================== */
+
+body.light-mode {
+    background: linear-gradient(
+        135deg,
+        #fce4ec,
+        #ffd6c5,
+        #fff0dc
+    );
+
+    color: #252525;
+}
+
+
+/* Background title */
+
+body.light-mode .background-title {
+    opacity: 0.25;
+}
+
+body.light-mode .background-title h2 {
+    color: #a72d48;
+}
+
+
+/* Profile Card */
+
+body.light-mode .profile-card {
+    background: #ffffff;
+
+    color: #252525;
+
+    border-color: #ed9ba8;
+
+    box-shadow:
+        0 15px 45px rgba(100, 30, 40, 0.18);
+}
+
+
+/* Change profile image */
+
+body.light-mode .dark-image {
+    display: none;
+}
+
+body.light-mode .light-image {
+    display: block;
+}
+
+
+/* Light mode description */
+
+body.light-mode .profile-info p {
+    color: #666666;
+}
+
+
+/* Light mode buttons */
+
+body.light-mode .theme-btn {
+    background: #ffffff;
+
+    color: #292929;
+
+    border-color: #e6a2ad;
+}
+
+body.light-mode .contact-button {
+    background: #f5e9ec;
+
+    color: #252525;
+}
+
+
+/* Light social section */
+
+body.light-mode .social-links {
+    background: #f4e9eb;
+}
+
+body.light-mode .social-icon {
+    background: #e4d8dc;
+
+    color: #252525;
+
+    border-color: #e0c5cc;
+}
+
+body.light-mode .social-icon:hover {
+    background: #ff8290;
+
+    color: white;
+}
+
+body.light-mode #button-message {
+    color: #a72d48;
+}
+
+
+/* =====================================
+   12. MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    .profile-card {
+        max-width: 340px;
+    }
+
+    .profile-image img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .profile-info h1 {
+        font-size: 29px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .background-title {
+        display: none;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+}

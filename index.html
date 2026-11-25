@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kira | Death Note Profile</title>
+
+    <!-- CSS connection -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- JavaScript connection -->
+    <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Background Decoration -->
+    <div class="background-title">
+        <h2>DEATH<br>NOTE</h2>
+        <span>🍎</span>
+    </div>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Theme Buttons -->
+        <div class="theme-buttons">
+
+            <button class="theme-btn"
+                    type="button"
+                    onclick="setLight()">
+
+                ☀️ Light
+
+            </button>
+
+            <button class="theme-btn"
+                    type="button"
+                    onclick="setDark()">
+
+                🌙 Dark
+
+            </button>
+
+        </div>
+
+
+        <!-- Profile Card -->
+        <section class="profile-card">
+
+
+            <!-- Profile Picture -->
+            <div class="profile-image">
+
+                <!-- Dark Mode Image -->
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHKa9TKgwnWG2PKpsZxhP8boBhq6huQznUl8_vqtF33AS328MKAyHJR8&s=10"
+                    alt="Kira Dark Mode"
+                    class="dark-image"
+                >
+
+                <!-- Light Mode Image -->
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWCAKxhZWSU8oQrnjviv3_Gi3Bo5LnwpTa2IkNzdYqy3w7EJlIs4Pht9Y&s=10"
+                    alt="Kira Light Mode"
+                    class="light-image"
+                >
+
+            </div>
+
+
+            <!-- Profile Information -->
+            <div class="profile-info">
+
+                <h1>KIRA</h1>
+
+                <div class="red-line"></div>
+
+                <p>
+                    Just a normal student...
+                    <br>
+                    with an extraordinary plan.
+                </p>
+
+                <h3>
+                    DEATH NOTE |
+                    <span>Light Yagami</span>
+                </h3>
+
+
+                <!-- Contact Button -->
+                <button
+                    class="contact-button"
+                    type="button"
+                    onclick="showMessage('Contact')">
+
+                    <span>✉</span>
+                    Get in touch
+
+                </button>
+
+            </div>
+
+
+            <!-- Social Media Buttons -->
+            <div class="social-links">
+
+                <!-- Instagram -->
+                <button
+                    class="social-icon"
+                    type="button"
+                    aria-label="Instagram"
+                    onclick="showMessage('Instagram')">
+
+                    <span class="instagram-logo">◎</span>
+
+                </button>
+
+
+                <!-- X / Twitter -->
+                <button
+                    class="social-icon"
+                    type="button"
+                    aria-label="X"
+                    onclick="showMessage('X')">
+
+                    <span class="x-logo">𝕏</span>
+
+                </button>
+
+
+                <!-- Email -->
+                <button
+                    class="social-icon"
+                    type="button"
+                    aria-label="Email"
+                    onclick="showMessage('Email')">
+
+                    <span>✉</span>
+
+                </button>
+
+
+                <!-- Website -->
+                <button
+                    class="social-icon"
+                    type="button"
+                    aria-label="Website"
+                    onclick="showMessage('Website')">
+
+                    <span>🌐</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Button Click Message -->
+            <p id="button-message" aria-live="polite"></p>
+
+
+        </section>
+
+    </main>
+
+</body>
+</html>
